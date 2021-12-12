@@ -1,23 +1,12 @@
-# FamousWord<br>
-検索結果数の多いものを調べるアルゴリズム
+# TodaysSchedule<br>
+本日の予定(講義内容)を通知するプログラム
 
 ## 機能<br>
-input.txtに入っているキーワードをGoogleで検索し検索結果数を出力するプログラムです。<br>
-
-![2021-10-17_19h49_50](https://user-images.githubusercontent.com/77985354/137624032-ad1f8dd0-e952-4aa8-b53c-490f54db9421.png)
-
-上の画像はcsv出力例<br>
-左が検索文字、右が検索結果数を表示
 
 ※time.sleep()を用いている理由は、これをしないと相手サーバーに過負荷をかけてしまうためです。<br>
 　集中アクセスを避けるためにtime.sleep()にて処理を遅延させています。<br>
 
 ## ざっくりとした仕組み<br>
-input.txtを読み込む<br>
-↓<br>
-seleniumで検索<br>
-↓<br>
-出力を「output.txt」「output.csv」に書き込む
 
 ## 動かない場合<br>
 ・実行できない！<br>
