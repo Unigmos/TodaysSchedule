@@ -47,11 +47,11 @@ def read_schedule(readfile):
             sheetdata = wb.get_sheet_by_name('Sheet1')
 
             row_data = []
-            # 記事タイトル取得
+            # 曜日別に取得
             for data in list(sheetdata.columns)[weekday + 1]:
                 row_data.append(data.value)
 
-            # タイトル(見出し)の削除
+            # 見出し(曜日)の削除
             row_data.pop(0)
 
             return row_data
