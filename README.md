@@ -13,7 +13,10 @@ time.sleep()を用いることで画面が表示されてから通知を行う�
 ↓<br>
 通知内容作成<br>
 ↓<br>
-通知処理
+通知処理<br>
+
+・通知イメージ<br>
+![notification-image](https://user-images.githubusercontent.com/77985354/145711077-996db825-55e1-4821-97d6-94392ebb73ea.png)
 
 ## 動かない場合<br>
 ・実行できない！<br>
