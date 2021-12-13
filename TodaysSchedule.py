@@ -4,8 +4,8 @@
 #
 # Author:       Shaneron
 #
-# Created:     2021/12/12
-# Copyright:   (c) Shaneron 2021
+# Created:      2021/12/12
+# Copyright:    (c) Shaneron 2021
 #-------------------------------------------------------------------------------
 
 # メイン処理
@@ -16,8 +16,8 @@ def main():
         # スタートアップで画面表示前に通知されてしまうためそれ対策
         time.sleep(40)
 
-        # パス指定
-        filepath = "./ScheduleData.xlsx"
+        # 参照パス指定
+        filepath = "./ScheduleData.csv"
 
         # それぞれの関数の処理実行
         schedule_data = read_schedule(filepath)
@@ -33,16 +33,16 @@ def main():
 # ファイル読み込み処理
 def read_schedule(readfile):
     try:
-        import openpyxl
-        import datetime
+        from datetime import date
         import pathlib
         import sys
 
         path = pathlib.Path(readfile)
-        weekday = datetime.date.today().weekday()
+        weekday = date.today().weekday()
 
         # ファイル別に読み込み
         if path.suffix == ".xlsx":
+            import openpyxl
             wb = openpyxl.load_workbook(readfile)
             sheetdata = wb.get_sheet_by_name('Sheet1')
 
@@ -53,12 +53,34 @@ def read_schedule(readfile):
 
             # 見出し(曜日)の削除
             row_data.pop(0)
+            print(row_data)
 
             return row_data
 
         elif path.suffix == ".csv":
-            print("現在編集中")
-            sys.exit()
+            import csv
+            import numpy as np
+            with open(readfile) as csv_file:
+                csv_data = csv.reader(csv_file)
+                csv_list = [row for row in csv_data]
+
+            # 二次元配列の列参照
+            csv_array = np.array(csv_list)
+            organized_list = csv_array[:, weekday + 1]
+
+            # 見出し(曜日)の削除
+            organized_list = np.delete(organized_list, 0)
+
+            # リスト内の空欄要素をNoneに書き換え
+            for index, l in enumerate(organized_list):
+                if l == '':
+                    organized_list[index] = None
+                else:
+                    pass
+
+            return organized_list
+
+        # 対応ファイルがない場合
         else:
             print("未対応ファイルです")
             sys.exit()
