@@ -17,18 +17,18 @@ def main():
         time.sleep(40)
 
         # 参照パス指定
-        filepath = "./ScheduleData.csv"
+        FILE_PATH = "./ScheduleData.csv"
 
         # それぞれの関数の処理実行
-        schedule_data = read_schedule(filepath)
+        schedule_data = read_schedule(FILE_PATH)
         title, schedule = make_content(schedule_data)
         notification(title, schedule)
 
         # 全て終われば処理終了
         sys.exit()
 
-    except ModuleNotFoundError as No_ModuleError:
-        print("ModuleNotFoundError:", No_ModuleError, "at read_schedule")
+    except ModuleNotFoundError as NO_MODULE_ERROR:
+        print("ModuleNotFoundError:", NO_MODULE_ERROR, "at read_schedule")
 
 # ファイル読み込み処理
 def read_schedule(readfile):
@@ -84,10 +84,10 @@ def read_schedule(readfile):
         else:
             print("未対応ファイルです")
             sys.exit()
-    except ModuleNotFoundError as No_ModuleError:
-        print("ModuleNotFoundError:", No_ModuleError, "at read_schedule")
-    except FileNotFoundError as NotFoundError:
-        print("FileNotFoundError:", NotFoundError, "at read_schedule")
+    except ModuleNotFoundError as NO_MODULE_ERROR:
+        print("ModuleNotFoundError:", NO_MODULE_ERROR, "at read_schedule")
+    except FileNotFoundError as NOT_FOUND_ERROR:
+        print("FileNotFoundError:", NOT_FOUND_ERROR, "at read_schedule")
 
 # 通知内容作成処理(titleとmessage内容作成)
 def make_content(row_data):
@@ -109,8 +109,8 @@ def make_content(row_data):
             message ="\n".join(del_none)
 
         return title_str, message
-    except ModuleNotFoundError as No_ModuleError:
-        print("ModuleNotFoundError:", No_ModuleError, "at meke_content")
+    except ModuleNotFoundError as NO_MODULE_ERROR:
+        print("ModuleNotFoundError:", NO_MODULE_ERROR, "at meke_content")
 
 # 通知処理
 def notification(title_word, schedule):
@@ -123,8 +123,8 @@ def notification(title_word, schedule):
         app_icon = "./logo.ico",
         timeout = 10
         )
-    except ModuleNotFoundError as No_ModuleError:
-        print("ModuleNotFoundError:", No_ModuleError, "at notification")
+    except ModuleNotFoundError as NO_MODULE_ERROR:
+        print("ModuleNotFoundError:", NO_MODULE_ERROR, "at notification")
 
 if __name__ == '__main__':
     main()
