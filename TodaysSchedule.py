@@ -120,7 +120,7 @@ def notification(title_word, schedule):
         title = title_word,
         message = str(schedule),
         app_name = "Today's Schedule",
-        app_icon = "./python.ico",
+        app_icon = "./logo.ico",
         timeout = 10
         )
     except ModuleNotFoundError as No_ModuleError:
