@@ -45,3 +45,4 @@ batファイル「Call_TodaysSchedule_Demo.bat」に自身のPython.exeとpyフ�
 ### 変更履歴<br>
 Ver1.0:初期バージョン<br>
 Ver1.1:csvファイルに対応させました<br>
+Ver1.2:アイコンを自作の画像に置き換えました<br>
