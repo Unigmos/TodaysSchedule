@@ -17,7 +17,7 @@ def main():
         time.sleep(40)
 
         # 参照パス指定
-        FILE_PATH = "./ScheduleData.csv"
+        FILE_PATH = "./schedule_data.csv"
 
         # それぞれの関数の処理実行
         schedule_data = read_schedule(FILE_PATH)
