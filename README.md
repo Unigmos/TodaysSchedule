@@ -19,7 +19,7 @@ time.sleep()を用いることで画面が表示されてから通知を行う�
 ![notification-image](https://user-images.githubusercontent.com/77985354/145711077-996db825-55e1-4821-97d6-94392ebb73ea.png)
 
 ## 起動時に動かしたい場合
-batファイル「」に自身のPython.exeとpyファイルのパスを指定し、タイムスケジューラに設定します。<br>
+batファイル「Call_TodaysSchedule_Demo.bat」に自身のPython.exeとpyファイルのパスを指定し、タイムスケジューラに設定します。<br>
 
 
 ## 動かない場合
