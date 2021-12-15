@@ -46,3 +46,4 @@ batファイル「Call_TodaysSchedule_Demo.bat」に自身のPython.exeとpyフ�
 Ver1.0:初期バージョン<br>
 Ver1.1:csvファイルに対応させました<br>
 Ver1.2:アイコンを自作の画像に置き換えました<br>
+Ver1.3:命名規則に則って変数や定数の表記を変更しました。<br>
