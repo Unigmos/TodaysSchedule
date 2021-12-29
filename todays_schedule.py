@@ -110,7 +110,7 @@ def make_content(row_data):
 
         return title_str, message
     except ModuleNotFoundError as NO_MODULE_ERROR:
-        print("ModuleNotFoundError:", NO_MODULE_ERROR, "at mke_content")
+        print("ModuleNotFoundError:", NO_MODULE_ERROR, "at make_content")
 
 # 通知処理
 def notification(title_word, schedule):
