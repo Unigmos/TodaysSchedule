@@ -18,9 +18,12 @@ time.sleep()を用いることで画面が表示されてから通知を行う�
 ・通知イメージ<br>
 ![notification-image](https://user-images.githubusercontent.com/77985354/145711077-996db825-55e1-4821-97d6-94392ebb73ea.png)
 
+## データの読み込み範囲
+csvファイルやxlsxファイルの読み込み範囲は2行目2列から6行6列の5x5の範囲です。<br>
+ご自身のデータ活用時にご利用ください。
+
 ## 起動時に動かしたい場合
 batファイル「Call_TodaysSchedule_Demo.bat」に自身のPython.exeとpyファイルのパスを指定し、タイムスケジューラに設定します。<br>
-
 
 ## 動かない場合
 ・実行できない！<br>
